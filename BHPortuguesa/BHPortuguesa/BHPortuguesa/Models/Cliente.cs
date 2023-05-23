@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace BHPortuguesa.Models;
+using System.ComponentModel.DataAnnotations;
 
 public class Cliente
 {
@@ -9,29 +10,28 @@ public class Cliente
     [StringLength(75)]
     public string NomeCliente { get; set; }
 
-    [StringLength(255)]
     [Required]
+    [StringLength(255)]
     public string Morada { get; set; }
 
-    [StringLength(75)]
     [Required]
+    [StringLength(75)]
     public string Cidade { get; set; }
 
-    [StringLength(25)]
     [Required]
+    [StringLength(25)]
     public string CodPostal { get; set; }
 
-    [StringLength(50)]
     [Required]
+    [StringLength(50)]
     public string País { get; set; }
 
-    [StringLength(20)] // Adjust the length as needed
-    public string? Telefone { get; set; }
+    [StringLength(20)]
+    public string Telefone { get; set; }
 
-    [StringLength(20)] // Adjust the length as needed
-    public string? Telemovel { get; set; }
+    [StringLength(20)]
+    public string Telemovel { get; set; }
 
-    [EmailAddress]
-    [StringLength(100)] // Adjust the length as needed
-    public string? Email { get; set; }
+    [StringLength(100)]
+    public string Email { get; set; }
 }
